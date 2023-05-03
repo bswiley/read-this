@@ -3,7 +3,13 @@ const inquirer = require("inquirer");
 
 inquirer
   .prompt([
-    {
+   {
+    type: 'statement',
+    message: "Answer the following questions in full sentences in a way that your responses are complete and don't appear to be answers to questions (hit enter when ready)",
+    name: "none",
+
+   },
+   {
       type: 'input',
       message: 'What is the title of your project or will be the title of your README?',
       name: 'title',
@@ -40,32 +46,48 @@ inquirer
 
 function writeFile(title, description, installation, usage, collaboration, license){
   if (title){
-  fs.writeFile('./README.md', `#${title}\n\n`, err =>
+  fs.writeFile('./README.md', `#${title}\n`, err =>
   {if (err) {
     console.error(err);
   node}});}
   else if (!title){
-  fs.writeFile('./README.md', `#\n\n`, err =>
+    fs.writeFile('./README.md', `#\n`, err =>
   {if (err) {
   console.error(err);
   node}});}
   if (description){
-  fs.appendFile('./README.md', `## Description\n${description}\n`, err =>
+  fs.appendFile('./README.md', `\n## Description\n${description}\n`, err =>
   {if (err) {
   console.error(err);
   node}});} 
   else if (!description){}
   if (installation){
-  fs.appendFile('./README.md', `## Installation\n${description}\n`, err =>
-    {if (err) {
-    console.error(err);
-    node}});} 
+  fs.appendFile('./README.md', `\n## Installation\n${installation}\n`, err =>
+  {if (err) {
+  console.error(err);
+  node}});} 
+  else if (!installation){
   }
-  
-  // \n\n##Description\n\n${motivation}\n${why}\n${solution}\n${learn}\n${challenges}\n${future}\n${description}\n\n##Installation\n\n${instalation}\n\n##Usage\n\n${usage}`, err =>
-//             // {if (err) {
-//               console.error(err);
-//             node}});
-//             // file written successfully
-// }
-  
+  if (usage){
+  fs.appendFile('./README.md', `\n## Usage\n${usage}\n`, err =>
+  {if (err) {
+  console.error(err);
+  node}});}
+  else if (!usage){
+  }
+  if (collaboration){
+  fs.appendFile('./README.md', `\n## Collaboration\n${collaboration}\n`, err =>
+  {if (err) {
+  console.error(err);
+  node}});} 
+  else if (!collaboration){
+  }
+  if (license){
+ fs.appendFile('./README.md', `\n## License\n${license}\n`, err =>
+ {if (err) {
+ console.error(err);
+ node}});} 
+ else if (!license){
+ }
+ console.log("Your README.md is ready!")
+}
