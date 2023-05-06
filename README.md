@@ -35,6 +35,6 @@ I currently am unable to accomodate any contributions at this time.
 I haven't created any automatic tests yet at this time. 
 
 ## Questions
-I will try my best to answer any questions that are sent to my email address regarding the project.  This project can be accesed at [github.com/bswiley/read-this](github.com/bswiley/read-this).  If you have questions, please email me at bswiley@gmail.com.
+I will try my best to answer any questions that are sent to my email address regarding the project.  This project can be accesed at [github.com/bswiley/read-this](https://github.com/bswiley/read-this).  If you have questions, please email me at bswiley@gmail.com.
 ## License
 This project has a/n MIT License
