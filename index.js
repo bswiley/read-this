@@ -160,7 +160,7 @@ if (tests){
  err ? console.error(err): console.log("License written"));}
  else if (!license){}
  if (questions || github || email){
- fs.appendFile('./README.md', `\n## Questions\n${questions ?`${questions}`:""}${github ?`This project can be accesed at github.com/${github}/${title}.  `:""}${email ?`If you have questions, please email me at ${email}.`:""}`, err =>
+ fs.appendFile('./README.md', `\n## Questions\n${questions ?`${questions}`:""}${github ?`This project can be accesed at [github.com/${github}/${title}](github.com/${github}/${title}).  `:""}${email ?`If you have questions, please email me at ${email}.`:""}`, err =>
  err ? console.error(err): console.log (""));}
  else if (!questions || !github || !email){}
  console.log("Your README.md is ready!")
