@@ -67,58 +67,58 @@ inquirer
 function writeFile(github, email, title, description, installation, usage, collaboration, license, tests, questions){
 switch (license) {
 case 'Apache 2.0 License':
-fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)", err  =>
+fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 case "Boost Software License 1.0":
-fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)", err  =>
+fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 case "BSD 3-Clause License":
-fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)", err  =>
+fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 
 case "BSD 2-Clause License":
-fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)", err  =>
+fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 
 case "Creative Commons Zero v1 Univeral":
-fs.writeFile("./README.md", "[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)", err  =>
+fs.writeFile("./README.md", "[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)](http://creativecommons.org/publicdomain/zero/1.0/)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 
 case "GNU Affero General Public License v3.0":
-fs.writeFile("./README.md", "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)", err  =>
+fs.writeFile("./README.md", "[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 
 case "GNU General Public License v3.0":
-fs.writeFile("./README.md", "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)", err  =>
+fs.writeFile("./README.md", "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
   
 case "GNU General Public License V2.0":
-fs.writeFile("./README.md", "[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)", err  =>
+fs.writeFile("./README.md", "[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 case "GNU Lesser General Public License v2.1":
-fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-LGPL_v2.1-blue.svg)](https://www.gnu.org/licenses/old-licenses/lgpl-2.1)", err  =>
+fs.writeFile("./README.md", "[![License](https://img.shields.io/badge/License-LGPL_v2.1-blue.svg)](https://www.gnu.org/licenses/old-licenses/lgpl-2.1)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 
 case "MIT License":
-fs.writeFile("./README.md", "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)", err  =>
+fs.writeFile("./README.md", "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 
 case "Mozilla Public License 2.0":
-fs.writeFile("./README.md", "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)", err  =>
+fs.writeFile("./README.md", "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
 case "The Unlicense":
-fs.writeFile("./README.md", "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)", err  =>
+fs.writeFile("./README.md", "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)\n\n", err  =>
 err ? console.error(err): console.log (""));
 break;
   
@@ -137,7 +137,7 @@ if (description){
 fs.appendFile('./README.md', `\n## Description\n${description}\n`, err =>
 err ? console.error(err): console.log("Description written"));}
 else if (!description){}
-fs.appendFile('./README.md', `\n\n## Table of Contents${installation ?"\n[Installation](#Installation)":""}${usage ?"\n[Usage](#Usage)":""}${collaboration ?"\n[Contributing](#Contributing)":""}${tests ?"\n[Tests](#Tests)":""}${license ?"\n[License](#License)":""}${questions || github || email ?"\n[Questions](#Questions)":""}`, err =>
+fs.appendFile('./README.md', `\n\n## Table of Contents\n${installation ?"\n[Installation](#Installation)\n":""}${usage ?"\n[Usage](#Usage)\n":""}${collaboration ?"\n[Contributing](#Contributing)\n":""}${tests ?"\n[Tests](#Tests)\n":""}${license ?"\n[License](#License)\n":""}${questions || github || email ?"\n[Questions](#Questions)\n":""}`, err =>
 err ? console.error(err): console.log("Table of Contents Written"));
 if (installation){
 fs.appendFile('./README.md', `\n## Installation\n${installation}\n`, err =>
