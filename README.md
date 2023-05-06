@@ -11,7 +11,7 @@ The reason behind this project is that I loath having to make README.md files af
 This application runs with Node.js so it is required that the user have Node.js already installed.  The dependencies, "inquirer" and "fs"  have to also be installed in node.js to use the application.
 
 ## Usage
-After the installation requirements are met, all that is required is that the user open their Node.js command link in the local folder where the "index.js" file was saved to the local machine.  The [linked video](./video.mp4) will next demonstrate how the application is used once run. 
+After the installation requirements are met, all that is required is that the user open their Node.js command link in the local folder where the "index.js" file was saved to the local machine.  The [linked video](video.mp4) will next demonstrate how the application is used once run. 
 
 
 ## Table of Contents
