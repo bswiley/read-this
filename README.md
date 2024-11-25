@@ -5,7 +5,7 @@
 # Read-This
 
 ## Description
-The reason behind this project is that I loath having to make README.md files after I'm finished creating a project on github. Often this is because I am new to software development and am not experienced in remembering all that is required for a good, quality README.md file. As suck, I created this application to do much of the work for me. All I have to do is provide answers to questions asked by the application and it does the rest of the work automatically filling out the sections of the README.md file, creating a professional document for me without me having to go online to look into the various sections that I need to include.
+The reason behind this project is that I loath having to make README.md files after I'm finished creating a project on github. Often this is because I am new to software development and am not experienced in remembering all that is required for a good, quality README.md file. As such, I created this application to do much of the work for me. All I have to do is provide answers to questions asked by the application and it does the rest of the work automatically filling out the sections of the README.md file, creating a professional document for me without me having to go online to look into the various sections that I need to include.
 
 ## Installation
 This application runs with Node.js so it is required that the user have Node.js already installed.  The dependencies, "inquirer" and "fs"  have to also be installed in node.js to use the application.
